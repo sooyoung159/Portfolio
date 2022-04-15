@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import techStack from "../img/techstack.png";
 
-const AboutMe = () => {
+const AboutMe: any = () => {
   return (
     <Wrapper>
       <Title>{`<About Me/>`}</Title>
@@ -17,6 +17,17 @@ const AboutMe = () => {
               개발 지식과 책임감, 그리고 협력을 기반으로 삼아 웹 애플리케이션을
             </div>
             <div>개발합니다.</div>
+            <div>
+              "어떻게 하면 사용자가 더 쓰기편한 서비스를 만들 수 있을까?"|
+              안녕하세요! 프론트엔드 개발자 이제찬입니다. 대학생활에 다양한
+              프로젝트와 인턴십과정에서 다양한 프로젝트를 진행하였고, 이를 통해
+              웹 개발 업무 프로세스에 전반적인 이해력을 습득하였습니다.
+              개발하면서 제가 느낀 좋은 IT 서비스는 사용자의 입장에서 쓰기편한
+              서비스라 생각하고, 늘 사용자의 관점을 고안하며 개발하고 있습니다.
+              현재는 거창한 업무성과보다 사용자의 작은 문제해결에 끝까지 몰입할
+              수 있는 신입 개발자입니다. 이런 저의 성장가능성을 믿고 이끌어줄
+              회사를 찾고 있습니다.
+            </div>
           </Description>
           <Skill>
             <img src={techStack} />
@@ -31,16 +42,16 @@ export default AboutMe;
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 70vh;
-  background-color: white;
+  height: 100vh;
+  background-color: #d9ffcf;
   padding: 1rem;
 `;
 
 const Title = styled.div`
   display: inline;
   font-size: 1.5rem;
-  color: #d2f7e1;
-  border: 2px solid #d2f7e1;
+  color: #2ad100;
+  border: 2px solid #2ad100;
   border-radius: 10%;
 `;
 
@@ -59,12 +70,13 @@ const NameCard = styled.div`
 `;
 
 const Description = styled.div`
-  width: 50%;
+  width: 50vw;
 `;
 
 const Skill = styled.div`
-  width: 50%;
+  width: 50vw;
   > img {
-    width: 100%;
+    position: relative;
+    height: 90vh;
   }
 `;

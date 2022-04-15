@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Main = () => {
+const Main: any = () => {
   return (
     <Me>
       <div>
@@ -22,5 +22,5 @@ const Me = styled.div`
   > div {
     font-size: 3rem;
   }
-  background-color: #d2f7e1;
+  background-color: white;
 `;
