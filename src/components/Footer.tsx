@@ -2,25 +2,28 @@ import styled from "styled-components";
 
 const Footer: any = () => {
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <TitleContainer>
-        <Title>contact</Title>
+        <Title>{`<Footer />`}</Title>
       </TitleContainer>
-      <NameCardContainer>
-        <NameCard>
-          <div>Sooyoung Kang</div>
-          <div>
+      <Container>
+        <NameCardContainer>
+          <Contact>Contact</Contact>
+          <NameCard>
+            <Name>Sooyoung Kang</Name>
             <div>
-              <div>email</div>
-              <div>sooyoung159@naver.com</div>
+              <InfoContainer>
+                <Info>Email</Info>
+                <div>sooyoung159@naver.com</div>
+              </InfoContainer>
+              <InfoContainer>
+                <Info>github</Info>
+                <div>https://github.com/sooyoung159</div>
+              </InfoContainer>
             </div>
-            <div>
-              <div>github</div>
-              <div>https://github.com/sooyoung159</div>
-            </div>
-          </div>
-        </NameCard>
-      </NameCardContainer>
+          </NameCard>
+        </NameCardContainer>
+      </Container>
     </Wrapper>
   );
 };
@@ -34,30 +37,60 @@ const Wrapper = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-left: 2rem;
 `;
 
 const Title = styled.div`
-  font-size: 4rem;
-  color: #2ad100;
+  display: inline;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.color.color};
+  border: 2px solid ${(props) => props.theme.color.color};
+  border-radius: 10px;
+  margin: 3rem;
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const NameCardContainer = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
+  /* text-align: center; */
   height: auto;
   margin-top: 9rem;
   /* padding: 2rem; */
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  padding: 1.5rem;
+`;
+
+const Contact = styled.div`
+  font-size: 2rem;
+  color: ${(props) => props.theme.color.color};
 `;
 
 const NameCard = styled.div`
-  width: 50vw;
-  height: 40vh;
-  background-color: white;
+  display: flex;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: black;
+  padding-top: 5rem;
+`;
+
+const Name = styled.div`
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.color.color};
+`;
+
+const InfoContainer = styled.div`
+  padding-bottom: 1rem;
+`;
+const Info = styled.div`
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.color.color};
+  padding-bottom: 5px;
 `;

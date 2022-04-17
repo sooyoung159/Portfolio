@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Main: any = () => {
   return (
-    <Me>
+    <Me id="main">
       <div>
         <div>프론트엔드 개발자</div>
         <div>강수영 입니다.</div>
@@ -21,6 +21,7 @@ const Me = styled.div`
   height: 100vh;
   > div {
     font-size: 3rem;
+    color: ${(props) => props.theme.color.color};
   }
   background-color: white;
 `;

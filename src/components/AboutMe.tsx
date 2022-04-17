@@ -3,35 +3,33 @@ import techStack from "../img/techstack.png";
 
 const AboutMe: any = () => {
   return (
-    <Wrapper>
-      <Title>{`<About Me/>`}</Title>
+    <Wrapper id="aboutme">
+      <Title>{`<About Me />`}</Title>
+
       <About>
         <NameCard>
-          <Description>
-            <div>계속 발전하드 개발자</div>
-            <div>새로운 도전을 두려워하지 않고 배움을 멈추지 않습니다</div>
-            <div>프론트엔드 개발자로 시작해서</div>
-            <div>2022년 현재 프론트엔드 개발자로서 나아가고자 합니다.</div>
-            <div>3년간 일본에서 풀스택 개발자로서의 경험에서 배운</div>
-            <div>
-              개발 지식과 책임감, 그리고 협력을 기반으로 삼아 웹 애플리케이션을
-            </div>
-            <div>개발합니다.</div>
-            <div>
-              "어떻게 하면 사용자가 더 쓰기편한 서비스를 만들 수 있을까?"|
-              안녕하세요! 프론트엔드 개발자 이제찬입니다. 대학생활에 다양한
-              프로젝트와 인턴십과정에서 다양한 프로젝트를 진행하였고, 이를 통해
-              웹 개발 업무 프로세스에 전반적인 이해력을 습득하였습니다.
-              개발하면서 제가 느낀 좋은 IT 서비스는 사용자의 입장에서 쓰기편한
-              서비스라 생각하고, 늘 사용자의 관점을 고안하며 개발하고 있습니다.
-              현재는 거창한 업무성과보다 사용자의 작은 문제해결에 끝까지 몰입할
-              수 있는 신입 개발자입니다. 이런 저의 성장가능성을 믿고 이끌어줄
-              회사를 찾고 있습니다.
-            </div>
-          </Description>
           <Skill>
             <img src={techStack} />
           </Skill>
+          <Description>
+            <Des1>"쉬운 서비스를 제공하고 싶다!"</Des1>
+            <Des2>안녕하세요! 프론트엔드 개발자 강수영입니다.</Des2>
+            <Des3>2022년 현재 프론트엔드 개발자로서 나아가고자 합니다.</Des3>
+            <Des3>
+              누구나 쉽게 적응할 수 있는 서비스를 만들고 싶습니다. 말 그대로
+              봤을 때 특별한 경험이 없어도 어떤 기능인지 어떤 정보를 제공해 줄
+              수 있을지 바로 알 수 있는 그런 서비스입니다.
+            </Des3>
+            <Des3>
+              단순히 반복작업만 하는 프로그래머가 아닌 많은 경험과 많은 시도를
+              통해 그런 보면 한눈에 알 수 있고 어떤 것을 클릭하면 내가 원하는
+              정보를 찾을 수 있는지 서비스를 제공하는 프로그래머가 되고
+              싶습니다.
+            </Des3>
+            <Des4>
+              이런 저의 성장가능성을 믿고 이끌어줄 회사를 찾고 있습니다.
+            </Des4>
+          </Description>
         </NameCard>
       </About>
     </Wrapper>
@@ -42,25 +40,27 @@ export default AboutMe;
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
-  background-color: #d9ffcf;
-  padding: 1rem;
+  height: 90vh;
+  background-color: ${(props) => props.theme.color.background};
+  padding-top: 2rem;
+  /* margin: 1rem; */
 `;
 
 const Title = styled.div`
   display: inline;
   font-size: 1.5rem;
-  color: #2ad100;
-  border: 2px solid #2ad100;
-  border-radius: 10%;
+  color: ${(props) => props.theme.color.color};
+  border: 2px solid ${(props) => props.theme.color.color};
+  border-radius: 10px;
+  margin: 3rem;
 `;
 
 const About = styled.div`
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
 
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
 `;
 
 const NameCard = styled.div`
@@ -71,12 +71,50 @@ const NameCard = styled.div`
 
 const Description = styled.div`
   width: 50vw;
+  /* display: flex; */
+  /* color: white; */
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-right: 5rem;
+  padding-left: 1rem;
+  /* > div {
+    margin-bottom: 1rem;
+  } */
+`;
+
+const Des1 = styled.div`
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: ${(props) => props.theme.color.color};
+`;
+
+const Des2 = styled.div`
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: ${(props) => props.theme.color.color};
+`;
+
+const Des3 = styled.div`
+  /* font-size: 1.3rem; */
+  margin-bottom: 1rem;
+`;
+
+const Des4 = styled.div`
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: ${(props) => props.theme.color.color};
 `;
 
 const Skill = styled.div`
   width: 50vw;
+  padding-top: 2rem;
+
   > img {
+    border: 1px solid ${(props) => props.theme.color.color};
+    border-radius: 10px;
     position: relative;
-    height: 90vh;
+    height: 70vh;
+    margin-left: 5rem;
   }
 `;
