@@ -79,7 +79,11 @@ const AboutMe: any = () => {
             </div>
             <Infomation>
               <div>Github</div>
-              <div>깃헙주소</div>
+              <div>
+                <a href="https://github.com/sooyoung159">
+                  https://github.com/sooyoung159
+                </a>
+              </div>
             </Infomation>
           </Infomations>
         </InfoRight>
