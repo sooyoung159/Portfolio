@@ -1,12 +1,91 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAddressCard,
+  faUser,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import techStack from "../img/techstack.png";
 
 const AboutMe: any = () => {
   return (
     <Wrapper id="aboutme">
-      <Title>{`<About Me />`}</Title>
+      <Title>
+        {/* <FontAwesomeIcon icon={faAddressCard} style={{ marginRight: "1rem" }} /> */}
+        {`<About Me />`}
+      </Title>
 
-      <About>
+      <InfoWrapper>
+        <InfoLeft>
+          <Infomations>
+            <div>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={{
+                  marginRight: "1rem",
+                  fontSize: "2rem",
+                  marginTop: "0.5rem",
+                }}
+              />
+            </div>
+            <Infomation>
+              <div>이름</div>
+              <div>강수영</div>
+            </Infomation>
+          </Infomations>
+          <Infomations>
+            <div>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                style={{
+                  marginRight: "1rem",
+                  fontSize: "2rem",
+                  marginTop: "0.3rem",
+                }}
+              />
+            </div>
+            <Infomation>
+              <div>이메일</div>
+              <div>sooyoung159@naver.com</div>
+            </Infomation>
+          </Infomations>
+        </InfoLeft>
+        <InfoRight>
+          <Infomations>
+            <div>
+              <FontAwesomeIcon
+                icon={faBlogger}
+                style={{
+                  marginRight: "1rem",
+                  fontSize: "2rem",
+                }}
+              />
+            </div>
+            <Infomation>
+              <div>블로그</div>
+              <div>블로그 주소</div>
+            </Infomation>
+          </Infomations>
+          <Infomations>
+            <div>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{
+                  marginRight: "1rem",
+                  fontSize: "2rem",
+                }}
+              />
+            </div>
+            <Infomation>
+              <div>Github</div>
+              <div>깃헙주소</div>
+            </Infomation>
+          </Infomations>
+        </InfoRight>
+      </InfoWrapper>
+
+      {/* <About>
         <NameCard>
           <Skill>
             <img src={techStack} />
@@ -31,7 +110,7 @@ const AboutMe: any = () => {
             </Des4>
           </Description>
         </NameCard>
-      </About>
+      </About> */}
     </Wrapper>
   );
 };
@@ -40,19 +119,61 @@ export default AboutMe;
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 90vh;
-  background-color: ${(props) => props.theme.color.background};
+  height: 50vh;
+  background-color: white;
   padding-top: 2rem;
-  /* margin: 1rem; */
+  justify-content: center;
 `;
 
 const Title = styled.div`
   display: inline;
   font-size: 1.5rem;
-  color: ${(props) => props.theme.color.color};
-  border: 2px solid ${(props) => props.theme.color.color};
-  border-radius: 10px;
-  margin: 3rem;
+  color: black;
+  /* border-bottom: 1px solid black; */
+  /* border-radius: 20px; */
+  margin: 4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+`;
+
+const InfoWrapper = styled.div`
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  /* background-color: lightgray; */
+  margin: auto;
+  margin-top: 1rem;
+  height: 40vh;
+  align-items: center;
+`;
+
+const InfoLeft = styled.div`
+  /* width: 50%; */
+  > div {
+    margin-bottom: 1rem;
+  }
+`;
+
+const InfoRight = styled.div`
+  /* width: 50%; */
+  > div {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+`;
+
+const Infomations = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+`;
+
+const Infomation = styled.div`
+  line-height: 1.5rem;
+  > div:first-child {
+    font-weight: bold;
+  }
 `;
 
 const About = styled.div`

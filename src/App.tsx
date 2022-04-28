@@ -5,6 +5,7 @@ import Career from "./components/Career";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Project from "./components/Project";
+import Skills from "./components/Skills";
 import GlobalStyle from "./GlobalStyle";
 import theme from "./theme";
 
@@ -15,15 +16,15 @@ function App() {
       <Wrapper>
         <Title href="#main">{"<Main />"}</Title>
         <Title href="#aboutme">{"<About Me />"}</Title>
+        <Title href="#skills">{"<Skills />"}</Title>
         <Title href="#career">{"<Career />"}</Title>
-        <Title href="#footer">{"<Footer />"}</Title>
+        <Title href="#project">{"<Project />"}</Title>
       </Wrapper>
-      {/* <Header /> */}
-      <Main className="box" />
-      <AboutMe className="box1" />
-      <Career className="box" />
-      {/* <Project /> */}
-      <Footer className="box" />
+      <Main />
+      <AboutMe />
+      <Skills />
+      <Career />
+      <Project />
     </ThemeProvider>
   );
 }
@@ -32,7 +33,7 @@ export default App;
 
 const Wrapper = styled.div`
   display: flex;
-  color: ${(props) => props.theme.color.color};
+  color: black;
   font-size: 1rem;
   width: 100%;
   justify-content: space-around;
@@ -41,7 +42,7 @@ const Wrapper = styled.div`
   top: 0;
   z-index: 10;
   height: 3rem;
-  border-bottom: 1px solid ${(props) => props.theme.color.color};
+  border-bottom: 1px solid black;
   /* background-color: #d9ffcf; */
 `;
 
@@ -52,5 +53,5 @@ const Title: any = styled.a`
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: ${(props) => props.theme.color.color};
+  color: black;
 `;

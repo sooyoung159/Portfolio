@@ -393,8 +393,8 @@ export default Career;
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
-  background-color: ${(props) => props.theme.color.background_white};
+  height: 50rem;
+  background-color: white;
 `;
 
 const Container = styled.div`
@@ -405,13 +405,14 @@ const Container = styled.div`
 const Title = styled.div`
   display: inline;
   font-size: 1.5rem;
-  color: ${(props) => props.theme.color.color};
-  border: 2px solid ${(props) => props.theme.color.color};
-  border-radius: 10px;
-  margin: 3rem;
-  /* margin-bottom: 1rem; */
+  color: black;
+  /* border-bottom: 1px solid black; */
+  /* border-radius: 20px; */
+  margin: 4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
 `;
-
 const About = styled.div`
   text-align: center;
   justify-content: center;
@@ -430,8 +431,6 @@ const NameCard = styled.div`
 const Description = styled.div`
   width: 30%;
   > img {
-    /* border: 1px solid ${(props) => props.theme.color.color};
-    border-radius: 10px; */
     width: 10rem;
     margin-bottom: 2rem;
   }
@@ -442,14 +441,12 @@ const Description = styled.div`
 const Des1 = styled.div`
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: ${(props) => props.theme.color.color};
+  color: black;
 `;
 
 const Des2 = styled.div`
   font-size: 1.1rem;
   margin-bottom: 1rem;
-
-  /* color: ${(props) => props.theme.color.color}; */
 `;
 
 const Des3 = styled.div`
@@ -460,8 +457,8 @@ const Des3 = styled.div`
 
 const SwiperStyled = styled(Swiper)`
   width: 50vw;
-  height: 80vh;
-  background-color: ${(props) => props.theme.color.background_white};
+  height: 40rem;
+  background-color: white;
   border-radius: 12px;
   display: flex;
   text-align: center;
@@ -494,14 +491,14 @@ const ProjectWrapper = styled.div`
   background-color: white;
   width: 30rem;
   height: 60vh;
-  border: 2px solid ${(props) => props.theme.color.color};
+  border: 2px solid black;
   border-radius: 10px;
   padding: 2rem 1rem;
 `;
 
 const Pro1 = styled.div`
   font-size: 1.2rem;
-  color: ${(props) => props.theme.color.color};
+  color: black;
   margin-bottom: 1rem;
 `;
 
@@ -528,11 +525,11 @@ const Pro4 = styled.div`
   > div {
     padding-bottom: 1rem;
     > span {
-      border: 1px solid ${(props) => props.theme.color.color};
+      border: 1px solid black;
       border-radius: 10px;
       padding: 3px;
-      background-color: ${(props) => props.theme.color.background};
-      color: ${(props) => props.theme.color.color};
+      background-color: white;
+      color: black;
       margin-right: 0.5rem;
     }
   }
