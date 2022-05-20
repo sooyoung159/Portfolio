@@ -1,12 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressCard,
-  faUser,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
-import techStack from "../img/techstack.png";
 
 const AboutMe: any = () => {
   return (
@@ -127,6 +122,16 @@ const Wrapper = styled.div`
   background-color: white;
   padding-top: 2rem;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
+
+  @media screen and (max-width: 850px) {
+    font-size: 10px;
+    > div {
+      font-size: 10px;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -139,6 +144,9 @@ const Title = styled.div`
   padding: 0.5rem 1rem;
   font-weight: 800;
   letter-spacing: 0.1rem;
+  @media screen and (max-width: 850px) {
+    margin: 0;
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -150,6 +158,9 @@ const InfoWrapper = styled.div`
   margin-top: 1rem;
   height: 40vh;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
 `;
 
 const InfoLeft = styled.div`
@@ -180,66 +191,66 @@ const Infomation = styled.div`
   }
 `;
 
-const About = styled.div`
-  /* text-align: center; */
-  justify-content: center;
+// const About = styled.div`
+//   /* text-align: center; */
+//   justify-content: center;
 
-  width: 100%;
-  /* height: 50vh; */
-`;
+//   width: 100%;
+//   /* height: 50vh; */
+// `;
 
-const NameCard = styled.div`
-  padding: 1rem;
-  display: flex;
-  justify-content: space-around;
-`;
+// const NameCard = styled.div`
+//   padding: 1rem;
+//   display: flex;
+//   justify-content: space-around;
+// `;
 
-const Description = styled.div`
-  width: 50vw;
-  /* display: flex; */
-  /* color: white; */
-  align-items: center;
-  justify-content: center;
-  padding-top: 5rem;
-  padding-right: 5rem;
-  padding-left: 1rem;
-  /* > div {
-    margin-bottom: 1rem;
-  } */
-`;
+// const Description = styled.div`
+//   width: 50vw;
+//   /* display: flex; */
+//   /* color: white; */
+//   align-items: center;
+//   justify-content: center;
+//   padding-top: 5rem;
+//   padding-right: 5rem;
+//   padding-left: 1rem;
+//   /* > div {
+//     margin-bottom: 1rem;
+//   } */
+// `;
 
-const Des1 = styled.div`
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.color.color};
-`;
+// const Des1 = styled.div`
+//   font-size: 1.5rem;
+//   margin-bottom: 2rem;
+//   color: ${(props) => props.theme.color.color};
+// `;
 
-const Des2 = styled.div`
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: ${(props) => props.theme.color.color};
-`;
+// const Des2 = styled.div`
+//   font-size: 1.3rem;
+//   margin-bottom: 1rem;
+//   color: ${(props) => props.theme.color.color};
+// `;
 
-const Des3 = styled.div`
-  /* font-size: 1.3rem; */
-  margin-bottom: 1rem;
-`;
+// const Des3 = styled.div`
+//   /* font-size: 1.3rem; */
+//   margin-bottom: 1rem;
+// `;
 
-const Des4 = styled.div`
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.color.color};
-`;
+// const Des4 = styled.div`
+//   font-size: 1rem;
+//   margin-bottom: 2rem;
+//   color: ${(props) => props.theme.color.color};
+// `;
 
-const Skill = styled.div`
-  width: 50vw;
-  padding-top: 2rem;
+// const Skill = styled.div`
+//   width: 50vw;
+//   padding-top: 2rem;
 
-  > img {
-    border: 1px solid ${(props) => props.theme.color.color};
-    border-radius: 10px;
-    position: relative;
-    height: 70vh;
-    margin-left: 5rem;
-  }
-`;
+//   > img {
+//     border: 1px solid ${(props) => props.theme.color.color};
+//     border-radius: 10px;
+//     position: relative;
+//     height: 70vh;
+//     margin-left: 5rem;
+//   }
+// `;

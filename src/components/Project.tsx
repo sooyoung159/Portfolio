@@ -39,6 +39,9 @@ const Wrapper = styled.div`
   height: 120rem;
   background-color: lightgray;
   padding-top: 2rem;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
   /* text-align: center; */
   /* display: flex; */
 `;
@@ -66,4 +69,7 @@ const ProjectsWrapper = styled.div`
   text-align: center;
   padding-top: 1rem;
   height: 100%;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
 `;

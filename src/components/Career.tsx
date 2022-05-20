@@ -14,7 +14,7 @@ const Career: any = () => {
   return (
     <Wrapper id="career">
       <Container>
-        <Title>{`<Career/>`}</Title>
+        <Title>{`<Career />`}</Title>
         <About>
           <NameCard>
             <Description>
@@ -30,6 +30,9 @@ const Career: any = () => {
                 개인과제를 수행하는 프로그램입니다.
               </Des3>
             </Description>
+            {
+              //#region
+            }
             <SwiperStyled
               spaceBetween={0}
               slidesPerView={1}
@@ -383,6 +386,9 @@ const Career: any = () => {
                 </Project>
               </SwiperSlide>
             </SwiperStyled>
+            {
+              //#endregion
+            }
           </NameCard>
         </About>
       </Container>
@@ -395,6 +401,9 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 50rem;
   background-color: white;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
 `;
 
 const Container = styled.div`
@@ -456,8 +465,7 @@ const Des3 = styled.div`
 `;
 
 const SwiperStyled = styled(Swiper)`
-  width: 50vw;
-  height: 40rem;
+  width: 60%;
   background-color: white;
   border-radius: 12px;
   display: flex;
@@ -466,6 +474,7 @@ const SwiperStyled = styled(Swiper)`
   padding-top: 1rem;
   padding-left: 5rem;
   z-index: 5;
+  /* height: 30rem; */
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -476,6 +485,9 @@ const SwiperStyled = styled(Swiper)`
       display: block;
     }
   }
+  /* &.slide {
+    height: 100%;
+  } */
 `;
 
 const Project = styled.div`
@@ -490,7 +502,7 @@ const ProjectWrapper = styled.div`
   text-align: left;
   background-color: white;
   width: 30rem;
-  height: 60vh;
+  /* height: 80%; */
   border: 2px solid black;
   border-radius: 10px;
   padding: 2rem 1rem;

@@ -15,7 +15,7 @@ const MomoProject = () => {
     <ProjectWrapper>
       <ProjectTitle>
         <div>IamMOMOproject</div>
-        <div>2022.04(2주)</div>
+        <div>2022.04 ~</div>
         <img src={momo} />
       </ProjectTitle>
       <ProjectDescription>

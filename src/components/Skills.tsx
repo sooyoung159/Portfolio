@@ -38,6 +38,14 @@ const Wrapper = styled.div`
   height: 40rem;
   background-color: lightgray;
   padding-top: 2rem;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
+
+  @media screen and (max-width: 850px) {
+    display: block;
+    height: auto;
+  }
   /* display: flex; */
 `;
 
@@ -62,12 +70,20 @@ const SkillWrapper = styled.div`
   margin-top: 1rem;
   /* height: 40vh; */
   /* align-items: center; */
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
 `;
 const LeftSkills = styled.div`
   background-color: white;
   width: 20rem;
   height: 32rem;
   border-radius: 10px;
+
+  @media screen and (max-width: 850px) {
+    height: 25rem;
+    border-radius: 10px;
+  }
 `;
 
 const RightSkills = styled.div`
@@ -76,7 +92,6 @@ const RightSkills = styled.div`
   height: 30rem;
   > div:first-child {
     margin-bottom: 2rem;
-    /* padding-bottom: rem; */
   }
 `;
 

@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import AboutMe from "./components/AboutMe";
 import Career from "./components/Career";
-import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
@@ -13,23 +11,45 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Wrapper>
-        <Title href="#main">{"<Main />"}</Title>
-        <Title href="#aboutme">{"<About Me />"}</Title>
-        <Title href="#skills">{"<Skills />"}</Title>
-        <Title href="#career">{"<Career />"}</Title>
-        <Title href="#project">{"<Project />"}</Title>
-      </Wrapper>
-      <Main />
-      <AboutMe />
-      <Skills />
-      <Career />
-      <Project />
+      <Test>
+        <Global>
+          <Wrapper>
+            <Title href="#main">{"<Main />"}</Title>
+            <Title href="#aboutme">{"<About Me />"}</Title>
+            <Title href="#skills">{"<Skills />"}</Title>
+            <Title href="#career">{"<Career />"}</Title>
+            <Title href="#project">{"<Project />"}</Title>
+          </Wrapper>
+          <Main />
+          <AboutMe />
+          <Skills />
+          <Career />
+          <Project />
+        </Global>
+      </Test>
     </ThemeProvider>
   );
 }
 
 export default App;
+
+const Test = styled.div`
+  @media screen and (min-width: 1200px) {
+    /* width: 1000px; */
+    display: flex;
+    /* border: 1px gray solid; */
+    justify-content: center;
+    /* align-items: center; */
+    /* z-index: 100; */
+  }
+`;
+
+const Global = styled.div`
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+    border: 2px black solid;
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,6 +63,9 @@ const Wrapper = styled.div`
   z-index: 10;
   height: 3rem;
   border-bottom: 1px solid black;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
   /* background-color: #d9ffcf; */
 `;
 

@@ -33,6 +33,9 @@ const Me = styled.div`
     justify-content: center;
     text-align: center;
   }
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
   /* background-color: none; */
 `;
 
@@ -41,6 +44,12 @@ const BackImg = styled.img`
   position: absolute;
   z-index: -1;
   opacity: 0.8;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
+  @media screen and (max-width: 850px) {
+    height: 100%;
+  }
 `;
 
 const Title = styled.div`

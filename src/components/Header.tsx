@@ -25,5 +25,14 @@ const Wrapper = styled.div`
   z-index: 10;
   height: 3rem;
   border-bottom: 1px solid lightgray;
+  @media screen and (min-width: 1200px) {
+    width: 1000px;
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 10px;
+    > div {
+      font-size: 10px;
+    }
+  }
   /* background-color: #d9ffcf; */
 `;
